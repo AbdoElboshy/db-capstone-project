@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema LittleLemonDB
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema LittleLemonDB
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `LittleLemonDB` DEFAULT CHARACTER SET utf8 ;
+USE `LittleLemonDB` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Booking`
+-- Table `LittleLemonDB`.`LittleLemonDB`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Booking` (
+CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Booking` (
   `BookingID` INT NOT NULL,
   `Date` DATE NULL,
   `TableNumber` INT NULL,
@@ -26,9 +26,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Staff_information`
+-- Table `LittleLemonDB`.`Staff_information`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Staff_information` (
+CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Staff_information` (
   `StaffID` INT NOT NULL,
   `FullName` VARCHAR(45) NULL,
   `E-mail` VARCHAR(45) NULL,
@@ -40,9 +40,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Customers`
+-- Table `LittleLemonDB`.`Customers`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Customers` (
+CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Customers` (
   `CustomerID` INT NOT NULL,
   `Customer_Name` VARCHAR(45) NULL,
   `Contact_Details` VARCHAR(45) NULL,
@@ -58,9 +58,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`MenuItems`
+-- Table `LittleLemonDB`.`MenuItems`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`MenuItems` (
+CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`MenuItems` (
   `MenuItemID` INT NOT NULL,
   `CourseName` VARCHAR(45) NULL,
   `StarterName` VARCHAR(45) NULL,
@@ -70,9 +70,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Menus`
+-- Table `LittleLemonDB`.`Menus`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Menus` (
+CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Menus` (
   `MenuID` INT NOT NULL,
   `Cuisines` VARCHAR(45) NULL,
   `MenuName` VARCHAR(45) NULL,
@@ -88,9 +88,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Delivery_Status`
+-- Table `LittleLemonDB`.`Delivery_Status`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Delivery_Status` (
+CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Delivery_Status` (
   `DeliveryID` INT NOT NULL,
   `DeliveryDate` DATE NULL,
   `Status` VARCHAR(45) NULL,
@@ -99,9 +99,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Orders`
+-- Table `LittleLemonDB`.`Orders`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Orders` (
+CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Orders` (
   `OrderID` INT NOT NULL,
   `OrderDate` DATE NULL,
   `Quantity` INT NULL,
@@ -139,9 +139,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Menus_has_MenuItems`
+-- Table `LittleLemonDB`.`Menus_has_MenuItems`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Menus_has_MenuItems` (
+CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Menus_has_MenuItems` (
   `Menus_MenuID` INT NOT NULL,
   `MenuItems_MenuItemID` INT NOT NULL,
   PRIMARY KEY (`Menus_MenuID`, `MenuItems_MenuItemID`),
